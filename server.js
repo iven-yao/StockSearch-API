@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const cors = require('cors');
+require('dotenv').config();
 const api_key= process.env.API_KEY;
 const finnhub_api = "https://finnhub.io/api/v1";
 
