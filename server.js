@@ -118,7 +118,7 @@ app.get('/api/recommendation',async (req, res) => {
 // social-sentiment
 app.get('/api/social-sentiment',async (req, res) => {
     console.log("/social-sentiment call");
-    let payload = {symbol:req.query.symbol, from: '2022-01-01', token:api_key};
+    let payload = {symbol:req.query.symbol, from: '2023-07-01', token:api_key};
     const param = new url.URLSearchParams(payload);
     try{
         let response = await axios.get(finnhub_api+"/stock/social-sentiment?"+param);
