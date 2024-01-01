@@ -68,7 +68,6 @@ app.get('/api/quote',async (req, res) => {
 app.get('/api/search',async (req, res) => {
     console.log("/search call");
     let payload = {q:req.query.q, token:api_key};
-    console.log(payload);
     const param = new url.URLSearchParams(payload);
     try {
         let response = await axios.get(finnhub_api+"/search?"+param);
